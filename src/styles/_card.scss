@@ -1,0 +1,58 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint-up(large) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    &__container:not(:last-child) {
+      margin-right: 3.5rem;
+    }
+  }
+  &__container {
+    width: 18.75rem;
+    height: 26.25rem;
+    position: relative;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  }
+  &__name {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    vertical-align: center;
+    padding: 50px 0;
+  }
+
+  &__content {
+    width: 100%;
+    position: absolute;
+    bottom: 1.375rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  &__number {
+    font-size: 2.25rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 1.25rem 0;
+  }
+
+  &__date {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__desc {
+    font-size: 1.125rem;
+  }
+}
