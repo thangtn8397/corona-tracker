@@ -12,7 +12,7 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
     fetchData();
   }, []);
 
-  const barChart = (
+  const barChart = confirmed ? (
     <Bar
       data={{
         labels: ["Infected", "Recovered", "Deaths"],
@@ -33,6 +33,8 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
         title: { display: true, text: `Current state in ${country}` },
       }}
     />
+  ) : (
+    <Spinner />
   );
 
   const lineChart = dailyData.length ? (
@@ -67,12 +69,7 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
   ) : (
     <Spinner color="blue" />
   );
-  return (
-    <div>
-      {barChart}
-      <div>{lineChart}</div>
-    </div>
-  );
+  return <div>{!country || country === "global" ? lineChart : barChart}</div>;
 };
 
 export default Charts;
