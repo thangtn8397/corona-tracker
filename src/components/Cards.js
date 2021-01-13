@@ -25,7 +25,7 @@ const Cards = ({ data }) => {
         className="card__number"
         start={0}
         end={data.recovered.value}
-        duration={2.5}
+        duration={1.5}
       />
       <span className="card__date">
         {new Date(data.lastUpdate).toDateString()}
