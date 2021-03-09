@@ -19,4 +19,6 @@ Desktop
 ![desktop](https://raw.githubusercontent.com/thangtn8397/corona-tracker/master/Screenshot/Screen%20Shot%202021-03-09%20at%2020.07.31.png)
 
 Mobile
+
+
 ![mobile](https://raw.githubusercontent.com/thangtn8397/corona-tracker/master/Screenshot/Screen%20Shot%202021-03-09%20at%2020.15.59.png)
