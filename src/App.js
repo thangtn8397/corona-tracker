@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import Charts from "./components/Charts";
 import Cards from "./components/Cards";
 import CountryPicker from "./components/CountryPicker";
-import styles from "./App.module.css";
 import { fetchData, fetchCountryDetail } from "./api";
-
 import "./styles/style.scss";
 
 function App() {
@@ -18,10 +16,11 @@ function App() {
     runEffect();
   }, []);
 
-  console.log(country);
   return (
-    <div className={styles.App}>
-      Covid 19
+    <div>
+      <header>
+        <h1>Corona Tracker</h1>
+      </header>
       <Cards data={data} />
       <CountryPicker
         pickCountry={async (country) => {

@@ -69,7 +69,11 @@ const Charts = ({ data: { confirmed, recovered, deaths }, country }) => {
   ) : (
     <Spinner color="blue" />
   );
-  return <div>{!country || country === "global" ? lineChart : barChart}</div>;
+  return (
+    <div className="container">
+      {!country || country === "global" ? lineChart : barChart}
+    </div>
+  );
 };
 
 export default Charts;

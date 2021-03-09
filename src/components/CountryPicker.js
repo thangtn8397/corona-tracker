@@ -11,7 +11,7 @@ const CountryPicker = ({ pickCountry }) => {
     countries();
   }, []);
   return (
-    <div>
+    <div className="country-picker">
       <select
         name="country picker"
         onChange={(e) => pickCountry(e.target.value)}

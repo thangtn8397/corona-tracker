@@ -53,7 +53,7 @@ const Cards = ({ data }) => {
   );
 
   return (
-    <div className="card flex container">
+    <div className="card container">
       <div className="card__container">
         <div className="card__name" style={{ backgroundColor: "purple" }}>
           Infected
